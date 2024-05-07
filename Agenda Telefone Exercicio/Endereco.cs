@@ -13,14 +13,17 @@ namespace Agenda_Telefone_Exercicio
         string nomeBairro;
         string nomeCidadeEstadoPais;
 
-        public Endereco(string nomeRua, string numCasa, string nomeBairro, string nomeCidadeEstado, string nomePais)
+        #region MetodoConstrutor
+        public Endereco(string nomeRua, string numCasa, string nomeBairro, string nomeCidadeEstadoPais)
         {
             this.nomeRua = nomeRua;
             this.numCasa = numCasa;
             this.nomeBairro = nomeBairro;
-            this.nomeCidadeEstadoPais = nomeCidadeEstado;
+            this.nomeCidadeEstadoPais = nomeCidadeEstadoPais;
         }
+        #endregion
 
+        #region GetSetAtributos
         public string getNomeRua() {  return nomeRua; } //Retornar o nome da rua
         public void setNomeRua(string rua) //Vai atribuir o nome da rua
         {
@@ -41,11 +44,14 @@ namespace Agenda_Telefone_Exercicio
         {
             this.nomeCidadeEstadoPais = cidadeEstadoPais;
         }
+        #endregion
 
+        #region ToStringAtributos
         public override string? ToString()
         {
             string mensagem = $"Endereço: \n{nomeRua}, {numCasa}, {nomeBairro}, {nomeCidadeEstadoPais}";
             return mensagem;
         }
+        #endregion
     }
 }

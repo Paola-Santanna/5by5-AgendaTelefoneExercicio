@@ -22,5 +22,7 @@ namespace Agenda_Telefone_Exercicio
             this.tail = null;
             this.head = null;
         }
+
+
     }
 }
